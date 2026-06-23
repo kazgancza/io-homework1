@@ -7,7 +7,7 @@ long long silnia(int n){
 	if(n < 2)
 		return 1;
 	return n * silnia(n-1);
-=======
+
 void is_prime(int n){
 	if(n<=1) return false;
 	int i=2;
