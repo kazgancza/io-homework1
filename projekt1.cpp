@@ -2,10 +2,20 @@
 
 using namespace std;
 
+
 long long silnia(int n){
 	if(n < 2)
 		return 1;
 	return n * silnia(n-1);
+=======
+void is_prime(int n){
+	if(n<=1) return false;
+	int i=2;
+	while(i*i <= n){
+		if(n % i == 0) return false;
+	}
+	return true;
+
 }
 
 int main() {
@@ -20,9 +30,21 @@ int main() {
         cout << "Podaj numer czynnosci, ktora chcesz wykonac" << endl;
         cout << "0. Wyjscie" << endl;
 	cout << "1. Obliczanie silni:" << endl;
+	cout << "2. Czy pierwsza" << endl;
         cin >> wyjscie;
+
 	if (wyjscie == 1){
 		cout << a << "! = " << silnia(a) << endl;
+
+	if(wyjscie == 2){
+		if(is_prime(a)){
+			cout << a << " jest pierwsza!" << endl;
+		}
+		else
+		{
+			cout << a << " NIE jest pierwsza" << endl;
+		}
+
 	}
     } while(wyjscie != 0);
     return 0;
